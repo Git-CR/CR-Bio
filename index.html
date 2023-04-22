@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bio of Charan</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: black;
+			font-family: sans-serif;
+			text-align: left;
+		}
+		h1 {
+			margin-top: 100px;
+			font-size: 28px;
+			color: white;
+			text-shadow: 2px 2px 4px black;
+		}
+		p {
+			font-size: 18px;
+			color: white;
+			text-shadow: 2px 2px 4px black;
+		}
+		input {
+			margin-top: 20px;
+			padding: 10px;
+			border-radius: 10px;
+			border: none;
+			font-size: 16px;
+		}
+		button {
+			margin-top: 20px;
+			padding: 10px 20px;
+			border-radius: 10px;
+			border: none;
+			background-color: orange;
+			color: Black;
+			font-size: 24px;
+			cursor: pointer;
+		}
+		#result {
+			margin-top: 20px;
+			font-size: 18px;
+			color: white;
+			text-shadow: 2px 2px 4px black;
+		}
+	</style>
+</head>
+<body>
+	<h1>To know more information regarding Charan</h1>
+	<p>then guess a number between 1 and 5:</p>
+	<input type="number" id="guess" min="1" max="5">
+	<button onclick="checkGuess()">Submit</button>
+	<p id="result"></p>
+
+	<script>
+		function checkGuess() {
+			const guess = parseInt(document.getElementById("guess").value);
+			const randomNumber = Math.floor(Math.random() * 5) + 1;
+
+			if (guess === randomNumber) {
+				document.getElementById("result").innerHTML = "Congratulations! You guessed the correct number.";
+				document.getElementById("result").innerHTML += "<br>Name: Marayala Charan";
+				document.getElementById("result").innerHTML += "<br>Personal mail: Charanrakesh89@gmail.com";
+
+document.getElementById("result").innerHTML += "<br>Favorite Binge series: Pirates of Caribbean";
+
+document.getElementById("result").innerHTML += "<br>Skills: SQL, Advanced EXCEL, Python";
+
+document.getElementById("result").innerHTML += "<br>Currently I'm learning: Python, HTML, CSS, Beautiful soup";
+	document.getElementById("result").innerHTML += "<br>Hobbies: Badminton, Music";
+			} else {
+				document.getElementById("result").innerHTML = "Sorry, that was incorrect. Please try again.";
+			}
+		}
+	</script>
+</body>
+</html>
